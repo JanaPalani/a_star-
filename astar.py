@@ -9,23 +9,14 @@ plot=pygame.display.set_mode((1000,700))
 
 # some global variables to be used in the code 
 run = True
-dict_plot={}
-s_sel=[]
-openlist = []
-closedlist = []
-last =[]
-f_dict={}
-g_dict={}
-last_dict = {}
+
+last,closedlist,openlist,s_sel,obstacle =[],[],[],[],[]
+f_dict,g_dict,last_dict,dict_plot={},{},{},{}
 itsstart = True 
-obstacle = []
-startnode = False
+startnode,drop,getpath,starttrav  = False,False,False,False
 choice = 0
 make = 'notstart'
 final=[]
-drop = False
-getpath = False
-starttrav=False
 neighbours =[(1,0),(-1,0),(0,1),(0,-1)]
 f_dict_copy = dp(f_dict)
 obtained =  None
